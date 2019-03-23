@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPos: {x: 0, y: 0, z: 0}
-  additionalHeight: {x: 0, y: 1.8, z: 0}
+  additionalHeight: {x: 0, y: 1, z: 0}
   myPlay: {fileID: 1774294910}
 --- !u!4 &1594308573
 Transform:
