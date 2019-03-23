@@ -112,12 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &14156921 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100004, guid: 88f75200b386f864786c9a5499b4ee39,
-    type: 3}
-  m_PrefabInstance: {fileID: 1774294909}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &265337587
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,12 +384,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &560571139 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100008, guid: 88f75200b386f864786c9a5499b4ee39,
-    type: 3}
-  m_PrefabInstance: {fileID: 1774294909}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &654211503
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,12 +535,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
---- !u!1 &979874801 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100006, guid: 88f75200b386f864786c9a5499b4ee39,
-    type: 3}
-  m_PrefabInstance: {fileID: 1774294909}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1007573585
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,12 +601,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1110168850 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100002, guid: 88f75200b386f864786c9a5499b4ee39,
-    type: 3}
-  m_PrefabInstance: {fileID: 1774294909}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1117748289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,26 +1203,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elevator: {fileID: 1774294911}
+  camera01: {fileID: 1594308571}
   elavatorY: 0
   nextLevelHeight: 0
   level: 0
   watchTime: 0
---- !u!114 &1774294913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774294911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9d391fe30615074bbd92fccc6815f27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  engine1: {fileID: 1110168850}
-  engine2: {fileID: 14156921}
-  engine3: {fileID: 979874801}
-  engine4: {fileID: 560571139}
 --- !u!1 &1795229447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,6 +1807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elevator: {fileID: 2034210411}
+  camera01: {fileID: 0}
   elavatorY: 0
   nextLevelHeight: 0
   level: 0

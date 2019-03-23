@@ -6,10 +6,12 @@ using Uween;
 public class moveElevator : MonoBehaviour
 {
     public GameObject elevator;
+    public GameObject camera01;
     public float elavatorY = 0;
     public float nextLevelHeight = 0;
     public int level = 0;
     public float watchTime;
+    public bool lockCamera = false;
 
     void Start()
     {
@@ -21,12 +23,13 @@ public class moveElevator : MonoBehaviour
 
         if (level == 1) {
             watchTime = 5f;
-            rotatePlatform();
+          
             nextLevelHeight = 12;            
         }
 
         if (level == 2) {
             watchTime = 5f;
+            rotatePlatform();
             nextLevelHeight = 6;            
         }
         if (level == 3) {
@@ -42,19 +45,28 @@ public class moveElevator : MonoBehaviour
             return;
         }
 
-            TweenY.Add(elevator, 4f, elavatorY).EaseInOutSine().Delay(watchTime).Then(goToNextFloor);
+        TweenY.Add(elevator, 4f, elavatorY).EaseInOutSine().Delay(watchTime).Then(goToNextFloor);
+
     }
 
     void GoFreeFall() {
 
-        Debug.Log("i am freefallin;");
-        TweenY.Add(elevator, 3f, 18).EaseInCubic().Delay(5f);
+        // Debug.Log("i am freefallin;");
+        TweenY.Add(elevator, 2f, 18).EaseInCubic().Delay(5f);
     }
 
     void rotatePlatform()
     {
-        TweenRY.Add(elevator, 20f, 360f).EaseInSine();
-        Debug.Log("Platform is rotating;");
+        // Debug.Log("Platform is rotating;");
+        // lockCamera = true;
+        // TweenRY.Add(elevator, 5f, 360f).EaseInSine();
+        // camera01.transform.LookAt(target);
+
+    }
+
+    void Update()
+    {
+    
     }
 
 }
