@@ -7,12 +7,18 @@ public class moveElevator : MonoBehaviour
 {
 
     public GameObject elevator;
-    void Update()
-    {
-        // transform.Translate(Vector3.forward * (Time.deltaTime / 3));
+    public float elavatorY = 0;
 
-        // log timeframe        
-        TweenY.Add(elevator, 5f, 10f);
-        // Debug.Log(Time.deltaTime);
+    void Start()
+    {
+       
+        NextFloor();
     }
+
+    void NextFloor() {
+        Debug.Log("we are moving to the next floor");
+        elavatorY = elavatorY + 6;
+        TweenY.Add(elevator, 4f, elavatorY).EaseInOutSine().Delay(5f).Then(NextFloor);
+    }
+
 }
