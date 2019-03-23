@@ -5,44 +5,56 @@ using Uween;
 
 public class moveElevator : MonoBehaviour
 {
-
     public GameObject elevator;
     public float elavatorY = 0;
-    public float levelHeight = 0;
+    public float nextLevelHeight = 0;
     public int level = 0;
+    public float watchTime;
 
     void Start()
     {
-       
-        NextFloor();
+        goToNextFloor();
     }
 
-    void NextFloor() {
-        Debug.Log("we are moving to the next floor");
+    void goToNextFloor() {
         level++;
-        
 
-        if (level == 1) levelHeight = 12;
-        if (level == 2) levelHeight = 6;
-        if (level == 3) levelHeight = 20;
-        Debug.Log(level);
-        Debug.Log(levelHeight);
+        if (level == 1) {
+            watchTime = 5f;
+            rotatePlatform();
+            nextLevelHeight = 12;            
+        }
 
-   
-        elavatorY = elavatorY + levelHeight;
-
+        if (level == 2) {
+            watchTime = 5f;
+            nextLevelHeight = 6;            
+        }
         if (level == 3) {
-            TweenY.Add(elevator, 4f, elavatorY).EaseInOutSine().Delay(5f).Then(FreeFall);
+            watchTime = 5f;
+            nextLevelHeight = 20;            
+        }
+
+        elavatorY = elavatorY + nextLevelHeight;
+
+        // the end
+        if (level == 3) {
+            TweenY.Add(elevator, 4f, elavatorY).EaseInOutSine().Delay(watchTime).Then(GoFreeFall);
             return;
         }
-        TweenY.Add(elevator, 4f, elavatorY).EaseInOutSine().Delay(5f).Then(NextFloor);
 
+            TweenY.Add(elevator, 4f, elavatorY).EaseInOutSine().Delay(watchTime).Then(goToNextFloor);
     }
 
-    void FreeFall() {
+    void GoFreeFall() {
 
         Debug.Log("i am freefallin;");
         TweenY.Add(elevator, 2f, 18).EaseInExponential().Delay(5f);
+    }
+
+    void rotatePlatform()
+    {
+        TweenRY.Add(elevator, 20f, 360f).EaseInSine();
+        Debug.Log("Platform is rotating;");
     }
 
 }

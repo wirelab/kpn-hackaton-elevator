@@ -20,11 +20,11 @@ public class rotatePlatformBlades : MonoBehaviour
     // Update is called once per frame
     void rotateBlades()
     {
-        Debug.Log("Rotate the blades now");
-        TweenRY.Add(engine1, 20f, 3600f).EaseInOutSine();
-        TweenRY.Add(engine2, 20f, 3600f).EaseInOutSine();
-        TweenRY.Add(engine3, 20f, 3600f).EaseInOutSine();
-        TweenRY.Add(engine4, 20f, 3600f).EaseInOutSine();
+        // Debug.Log("Rotate the blades now");
+        TweenRY.Add(engine1, 40f, 9200f).EaseInOutSine();
+        TweenRY.Add(engine2, 40f, 9200f).EaseInOutSine();
+        TweenRY.Add(engine3, 40f, 9200f).EaseInOutSine();
+        TweenRY.Add(engine4, 40f, 9200f).EaseInOutSine();
     }
 
 }
