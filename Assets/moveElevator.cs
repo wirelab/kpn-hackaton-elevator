@@ -48,7 +48,7 @@ public class moveElevator : MonoBehaviour
     void GoFreeFall() {
 
         Debug.Log("i am freefallin;");
-        TweenY.Add(elevator, 2f, 18).EaseInExponential().Delay(5f);
+        TweenY.Add(elevator, 3f, 18).EaseInCubic().Delay(5f);
     }
 
     void rotatePlatform()
