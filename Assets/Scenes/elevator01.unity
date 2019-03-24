@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028377, g: 0.22571409, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -153,12 +153,12 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: narration-city
-    clip: {fileID: 8300000, guid: 87f294c4d853be748ae456b9b24382bf, type: 3}
+    clip: {fileID: 8300000, guid: 5c8c39a2b087fe6498ef42bfbb9479c7, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: free-fall
-    clip: {fileID: 8300000, guid: d491d4a6930f97441888e9e0d620a43f, type: 3}
+    clip: {fileID: 8300000, guid: ea42190d2ca25b640a0f03a2a26382ca, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -172,8 +172,8 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  - name: narration-museum-5
-    clip: {fileID: 8300000, guid: 80981a60b81b7bd4db4aa327117119e0, type: 3}
+  - name: narration-museum
+    clip: {fileID: 8300000, guid: 96340e719741d22478dc5370476c7c38, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -682,21 +682,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd603149e175af444a188a28701588bf, type: 3}
---- !u!4 &567156207
+--- !u!4 &567156207 stripped
 Transform:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 400002, guid: c3a43653da5798f4e9af4660789bef22,
     type: 3}
   m_PrefabInstance: {fileID: 347810318}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698261763}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1604696544}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &654211503
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,22 +756,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 678225789}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &698261763
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 347810318}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 567156207}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &863221865
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +822,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 17.9, z: 0.34}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
-  - {fileID: 1604696544}
+  - {fileID: 567156207}
   - {fileID: 1351990128}
   - {fileID: 360553153}
   - {fileID: 1575241713}
@@ -2250,37 +2225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usePerEyeCameras: 0
   useFixedUpdateForTracking: 0
---- !u!1 &1604696543
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 347810318}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1604696544}
-  m_Layer: 0
-  m_Name: TV (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1604696544
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 347810318}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604696543}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 567156207}
-  m_Father: {fileID: 863827193}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1683133233
 GameObject:
   m_ObjectHideFlags: 0
