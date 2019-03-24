@@ -5,17 +5,15 @@ using Uween;
 
 public class ComponentSwitcher : MonoBehaviour
 {
-    public void Show(string name) {
-        Debug.Log("Showing: " + name);
+
+    public GameObject cable;
+    public void Show() {
         //   GetComponent
-        TweenSXYZ.Add(GameObject.Find(name), 0f, 1, 1, 1);
+        TweenSXYZ.Add(cable, 0f, 1, 1, 1);
     }
 
-    public void Hide(string name)
+    public void Hide()
     {
-
-        Debug.Log("Hiding: "+name);
-
-        TweenSXYZ.Add(GameObject.Find(name), 0f, 0,0,0);
+       TweenSXYZ.Add(cable, 0f, 0,0,0);
     }
 }
