@@ -1214,9 +1214,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elevator: {fileID: 1774294911}
+  camera01: {fileID: 0}
   elavatorY: 0
-  levelHeight: 0
+  nextLevelHeight: 0
   level: 0
+  watchTime: 0
+  lockCamera: 0
 --- !u!1 &1795229447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,28 +1869,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5a01c5365aa9cc24a9e7100c03fd8a55, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 295165119b1e1e947953a22ac2512695, type: 3}
---- !u!1 &2034210411 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100464, guid: 295165119b1e1e947953a22ac2512695,
-    type: 3}
-  m_PrefabInstance: {fileID: 2034210409}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2034210412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034210411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc557e3a2e36254984cd6f9cab1103b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elevator: {fileID: 2034210411}
-  elavatorY: 0
-  levelHeight: 12
-  level: 0
 --- !u!1 &2041435777
 GameObject:
   m_ObjectHideFlags: 0
