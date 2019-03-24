@@ -20,7 +20,7 @@ public class moveElevator : MonoBehaviour
 
     void Start()
     {
-        
+       //  FindObjectOfType<ComponentSwitcher>().Hide("Kabel en Tekst V2");
     }
 
     void addHeight(float height) {
@@ -91,7 +91,7 @@ public class moveElevator : MonoBehaviour
         float freeFallTime = 2f;
         gotoHeight(18);
 
-        FindObjectOfType<ComponentSwitcher>().Show("Line018");
+        // FindObjectOfType<ComponentSwitcher>().Show("Kabel en Tekst V2");
 
         FindObjectOfType<AudioManager>().Stop("narration-city");
         FindObjectOfType<AudioManager>().Play("free-fall");
