@@ -48,7 +48,7 @@ public class moveElevator : MonoBehaviour
 
     void startCave() {
         float watchTime = 5f;
-        float platformRaiseTime = 1f;
+        float platformRaiseTime = 4f;
         addHeight(12);
         TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startMuseum);
     }
@@ -61,8 +61,16 @@ public class moveElevator : MonoBehaviour
             float watchTime = 1f;
             float platformRaiseTime = 1f;
             addHeight(6);
-            TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startFreefall);
+            TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startCity);
         });
+    }
+
+    void startCity()
+    {
+        float watchTime = 5f;
+        float platformRaiseTime = 1f;
+        addHeight(6);
+        TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startMuseum);
     }
 
     void startFreefall() {
