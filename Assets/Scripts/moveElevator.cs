@@ -34,9 +34,9 @@ public class moveElevator : MonoBehaviour
     {
         if (!isStarted && (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetMouseButtonDown(0))) {
             isStarted = true;
-            // TweenY.Add(elevator, 0f, 0).Then(startCave);
+            TweenY.Add(elevator, 0f, 0).Then(startCave);
             // TweenY.Add(elevator, 0f, 12).Then(startMuseum);
-            TweenY.Add(elevator, 0f, 18).Then(startCity);
+            // TweenY.Add(elevator, 0f, 18).Then(startCity);
         }
 
         if (canReset && (OVRInput.GetDown(OVRInput.RawButton.Back) || Input.GetMouseButtonDown(0))) {
