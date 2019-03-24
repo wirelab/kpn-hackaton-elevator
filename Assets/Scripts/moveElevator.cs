@@ -20,7 +20,7 @@ public class moveElevator : MonoBehaviour
 
     void Start()
     {
-        FindObjectOfType<ComponentSwitcher>().Hide("Line018");
+        
     }
 
     void addHeight(float height) {
@@ -79,21 +79,32 @@ public class moveElevator : MonoBehaviour
 
     void startCity()
     {
-        float watchTime = 1f;
-        float platformRaiseTime = 10f;
+        float watchTime = 5f;
+        float platformRaiseTime = 15f;
         gotoHeight(38);
+
+        FindObjectOfType<AudioManager>().Play("narration-city");
         TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startFreefall);
     }
 
     void startFreefall() {
-
-
-        FindObjectOfType<ComponentSwitcher>().Show("Kabel en Tekst/Line018");
-
         float freeFallTime = 2f;
         gotoHeight(18);
 
+        FindObjectOfType<ComponentSwitcher>().Show("Line018");
+
+        FindObjectOfType<AudioManager>().Stop("narration-city");
+        FindObjectOfType<AudioManager>().Play("free-fall");
+
         TweenY.Add(elevator, freeFallTime, liftHeight).EaseInCubic().Then(delegate() {
+
+            FindObjectOfType<AudioManager>().Stop("free-fall");
+            FindObjectOfType<AudioManager>().Play("free-fall-crash");
+
+            TweenNull.Add(soundObject, 2.5f).Then(delegate () {
+                FindObjectOfType<AudioManager>().Play("narration-future");
+            });
+
             // shake floor
             CameraShaker.Instance.ShakeOnce(12, 2.5f, 0f, 2f);
             
