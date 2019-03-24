@@ -46,6 +46,9 @@ public class moveElevator : MonoBehaviour
     }
 
     void startCave() {
+
+        // sound
+        FindObjectOfType<AudioManager>().Play("narration01");
         float watchTime = 5f;
         float platformRaiseTime = 4f;
         addHeight(12);
