@@ -20,7 +20,7 @@ public class moveElevator : MonoBehaviour
 
     void Start()
     {
-        FindObjectOfType<ComponentSwitcher>().Hide("Line018");
+        
     }
 
     void addHeight(float height) {
@@ -82,12 +82,15 @@ public class moveElevator : MonoBehaviour
         float platformRaiseTime = 15f;
         gotoHeight(38);
 
+        FindObjectOfType<AudioManager>().Play("narration-city");
         TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startFreefall);
     }
 
     void startFreefall() {
         float freeFallTime = 2f;
         gotoHeight(18);
+
+        FindObjectOfType<ComponentSwitcher>().Show("Line018");
 
         FindObjectOfType<AudioManager>().Stop("narration-city");
         FindObjectOfType<AudioManager>().Play("free-fall");
