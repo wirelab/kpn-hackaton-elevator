@@ -52,7 +52,7 @@ public class moveElevator : MonoBehaviour
 
         float platformRaiseTime = 10f;
         float delayForSpeech = 1f;
-        float watchTime = 18.3f + delayForSpeech;
+        float watchTime = 16.3f + delayForSpeech;
 
         // sound
         TweenNull.Add(soundObject, delayForSpeech).Then(delegate () {
