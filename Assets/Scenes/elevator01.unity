@@ -215,16 +215,16 @@ MonoBehaviour:
   sounds:
   - name: ambient
     clip: {fileID: 8300000, guid: 98a6b200d1f1f4c4f977ab0dc3cfba00, type: 3}
-    volume: 0.079
+    volume: 0.122
     pitch: 1
     source: {fileID: 0}
   - name: narration-cave
-    clip: {fileID: 8300000, guid: 2b647abb57b256942bc099c92f3838b8, type: 3}
+    clip: {fileID: 8300000, guid: d3c1170c5fbe511489692eeba799f16e, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  - name: narration-museum-1
-    clip: {fileID: 8300000, guid: 496be3046d0a54647b5d1b582b57da39, type: 3}
+  - name: narration-museum
+    clip: {fileID: 8300000, guid: 96340e719741d22478dc5370476c7c38, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
