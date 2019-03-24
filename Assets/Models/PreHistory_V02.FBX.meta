@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e511da35fcd97024b9740936c56de72c
+guid: 0330c1e3a2bb5f941957dca75aa6d669
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -332,8 +332,7 @@ ModelImporter:
     2100016: Busmapping
     2100018: Oranje
     2100020: Groen
-    2100022: No Name
-    2100024: wolkjes
+    2100022: wolkjes
     2300000: Box029
     2300002: Box030
     2300004: Box031

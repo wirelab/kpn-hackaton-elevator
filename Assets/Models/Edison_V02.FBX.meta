@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4869c0d024ed82845b0b5be675bd8096
+guid: f7cda3173990cbb43bb62f7cf2572d37
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -342,17 +342,21 @@ ModelImporter:
     2300174: Object011
     2300176: Object012
     2300178: Phone
-    2300180: ShowTafel_003
-    2300182: ShowTafel_006
-    2300184: ShowTafel_007
-    2300186: ShowTafel_008
-    2300188: ShowTafel_009
-    2300190: ShowTafel_010
-    2300192: ShowTafel_011
-    2300194: ShowTafel_012
-    2300196: Tube009
-    2300198: Tube010
-    2300200: Tube011
+    2300180: Rectangle001
+    2300182: Rectangle002
+    2300184: Rectangle003
+    2300186: Rectangle004
+    2300188: ShowTafel_003
+    2300190: ShowTafel_006
+    2300192: ShowTafel_007
+    2300194: ShowTafel_008
+    2300196: ShowTafel_009
+    2300198: ShowTafel_010
+    2300200: ShowTafel_011
+    2300202: ShowTafel_012
+    2300204: Tube009
+    2300206: Tube010
+    2300208: Tube011
     3300000: Box20179
     3300002: Box20180
     3300004: Box20181
@@ -443,17 +447,21 @@ ModelImporter:
     3300174: Object011
     3300176: Object012
     3300178: Phone
-    3300180: ShowTafel_003
-    3300182: ShowTafel_006
-    3300184: ShowTafel_007
-    3300186: ShowTafel_008
-    3300188: ShowTafel_009
-    3300190: ShowTafel_010
-    3300192: ShowTafel_011
-    3300194: ShowTafel_012
-    3300196: Tube009
-    3300198: Tube010
-    3300200: Tube011
+    3300180: Rectangle001
+    3300182: Rectangle002
+    3300184: Rectangle003
+    3300186: Rectangle004
+    3300188: ShowTafel_003
+    3300190: ShowTafel_006
+    3300192: ShowTafel_007
+    3300194: ShowTafel_008
+    3300196: ShowTafel_009
+    3300198: ShowTafel_010
+    3300200: ShowTafel_011
+    3300202: ShowTafel_012
+    3300204: Tube009
+    3300206: Tube010
+    3300208: Tube011
     4300000: Tube009
     4300002: Tube010
     4300004: Tube011
@@ -543,18 +551,22 @@ ModelImporter:
     4300172: Box20247
     4300174: Box20246
     4300176: Box20245
-    4300178: Box20249
-    4300180: Box20250
-    4300182: Box20251
-    4300184: Box20252
-    4300186: Box20253
-    4300188: Box20254
-    4300190: Box20255
-    4300192: Box20256
-    4300194: Box20257
-    4300196: Box20258
-    4300198: Box20259
-    4300200: Box20260
+    4300178: Rectangle001
+    4300180: Box20249
+    4300182: Box20250
+    4300184: Box20251
+    4300186: Box20252
+    4300188: Rectangle002
+    4300190: Box20253
+    4300192: Box20254
+    4300194: Box20255
+    4300196: Box20256
+    4300198: Rectangle003
+    4300200: Box20257
+    4300202: Box20258
+    4300204: Box20259
+    4300206: Box20260
+    4300208: Rectangle004
   externalObjects: {}
   materials:
     importMaterials: 1

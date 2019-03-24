@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 452f4edf7853bf14fb90fead379fc027
+guid: 5ee9c56a62d3f0d4b8199d1abce96d2a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -31,6 +31,8 @@ ModelImporter:
     100050: Object002
     100052: Object003
     100054: Object004
+    100056: Text001
+    100058: Text002
     400000: Box022
     400002: Box023
     400004: Box024
@@ -59,11 +61,14 @@ ModelImporter:
     400050: Object002
     400052: Object003
     400054: Object004
+    400056: Text001
+    400058: Text002
     2100000: Wit
     2100002: Zwart
     2100004: Groen
     2100006: Blauw
     2100008: Busmapping
+    2100010: 02___Default
     2300000: Box022
     2300002: Box023
     2300004: Box024
@@ -89,6 +94,8 @@ ModelImporter:
     2300044: Object002
     2300046: Object003
     2300048: Object004
+    2300050: Text001
+    2300052: Text002
     3300000: Box022
     3300002: Box023
     3300004: Box024
@@ -114,6 +121,8 @@ ModelImporter:
     3300044: Object002
     3300046: Object003
     3300048: Object004
+    3300050: Text001
+    3300052: Text002
     4300000: Box022
     4300002: Cylinder041
     4300004: Cylinder042
@@ -139,6 +148,8 @@ ModelImporter:
     4300044: Cylinder047
     4300046: Cylinder048
     4300048: Object004
+    4300050: Text001
+    4300052: Text002
   externalObjects: {}
   materials:
     importMaterials: 1
