@@ -34,9 +34,9 @@ public class moveElevator : MonoBehaviour
     {
         if (!isStarted && (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetMouseButtonDown(0))) {
             isStarted = true;
-            // TweenY.Add(elevator, 0f, 0).Then(startCave);
+            TweenY.Add(elevator, 0f, 0).Then(startCave);
             // TweenY.Add(elevator, 0f, 12).Then(startMuseum);
-            TweenY.Add(elevator, 0f, 18).Then(startCity);
+            // TweenY.Add(elevator, 0f, 18).Then(startCity);
         }
 
         if (canReset && (OVRInput.GetDown(OVRInput.RawButton.Back) || Input.GetMouseButtonDown(0))) {
@@ -71,7 +71,7 @@ public class moveElevator : MonoBehaviour
 
         TweenRY.Add(elevator, rotateDuration, 100f).Delay(watchTimeBeforeRotation).Then(delegate() {
             float watchTime = 1f;
-            float platformRaiseTime = 1f;
+            float platformRaiseTime = 8f;
             gotoHeight(18);
             TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startCity);
         });
@@ -80,7 +80,7 @@ public class moveElevator : MonoBehaviour
     void startCity()
     {
         float watchTime = 5f;
-        float platformRaiseTime = 15f;
+        float platformRaiseTime = 15.4f;
         gotoHeight(38);
 
         FindObjectOfType<AudioManager>().Play("narration-city");
