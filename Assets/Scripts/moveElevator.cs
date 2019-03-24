@@ -70,15 +70,16 @@ public class moveElevator : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("narration-museum");
 
         TweenRY.Add(elevator, rotateDuration, 100f).Delay(watchTimeBeforeRotation).Then(delegate() {
-            float platformRaiseTime = 7f;
+            float watchTime = 1f;
+            float platformRaiseTime = 1f;
             gotoHeight(18);
-            TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Then(startCity);
+            TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startCity);
         });
     }
 
     void startCity()
     {
-        float watchTime = 2f;
+        float watchTime = 1f;
         float platformRaiseTime = 10f;
         gotoHeight(38);
         TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startFreefall);
@@ -87,7 +88,7 @@ public class moveElevator : MonoBehaviour
     void startFreefall() {
 
 
-        FindObjectOfType<ComponentSwitcher>().Show("Line018");
+        FindObjectOfType<ComponentSwitcher>().Show("Kabel en Tekst/Line018");
 
         float freeFallTime = 2f;
         gotoHeight(18);

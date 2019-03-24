@@ -1,22 +1,69 @@
 fileFormatVersion: 2
-guid: c28fa8d61f81fb742b1180a6d4516625
+guid: 47b4fd506a3061040a5fcdb9932efa6c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Mesh1_Model
-    400000: //RootNode
-    400002: Mesh1_Model
-    2300000: Mesh1_Model
-    3300000: Mesh1_Model
-    4300000: Mesh1_Model
-    9500000: //RootNode
+    100000: Box20261
+    100002: //RootNode
+    100004: Object096
+    100006: Object097
+    100008: Object098
+    100010: Object099
+    100012: Object100
+    100014: Stayconnected
+    100016: UTP_Kabel
+    100018: UTP_kop
+    100020: WatBrengt
+    400000: Box20261
+    400002: //RootNode
+    400004: Object096
+    400006: Object097
+    400008: Object098
+    400010: Object099
+    400012: Object100
+    400014: Stayconnected
+    400016: UTP_Kabel
+    400018: UTP_kop
+    400020: WatBrengt
+    2100000: 02___Default
+    2100002: Wit
+    2100004: Rood
+    2100006: Steen3
+    2100008: Zwart
+    2100010: Blauw
+    2300000: Box20261
+    2300002: Object096
+    2300004: Object097
+    2300006: Object098
+    2300008: Object099
+    2300010: Object100
+    2300012: Stayconnected
+    2300014: UTP_Kabel
+    2300016: WatBrengt
+    3300000: Box20261
+    3300002: Object096
+    3300004: Object097
+    3300006: Object098
+    3300008: Object099
+    3300010: Object100
+    3300012: Stayconnected
+    3300014: UTP_Kabel
+    3300016: WatBrengt
+    4300000: WatBrengt
+    4300002: Stayconnected
+    4300004: UTP_Kabel
+    4300006: Box20261
+    4300008: Object096
+    4300010: Object097
+    4300012: Object098
+    4300014: Object099
+    4300016: Object100
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -46,10 +93,10 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    importVisibility: 0
+    importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -57,20 +104,20 @@ ModelImporter:
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    indexFormat: 1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
-    normalSmoothAngle: 90
+    normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 1
-    normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1
@@ -89,9 +136,9 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
-    skeletonHasParents: 0
+    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
