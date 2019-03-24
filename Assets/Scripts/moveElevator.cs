@@ -34,8 +34,9 @@ public class moveElevator : MonoBehaviour
     {
         if (!isStarted && (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetMouseButtonDown(0))) {
             isStarted = true;
-            startCave();
-            // startMuseum();
+            // TweenY.Add(elevator, 0f, 0).Then(startCave);
+            // TweenY.Add(elevator, 0f, 12).Then(startMuseum);
+            TweenY.Add(elevator, 0f, 18).Then(startCity);
         }
 
         if (canReset && (OVRInput.GetDown(OVRInput.RawButton.Back) || Input.GetMouseButtonDown(0))) {
@@ -49,58 +50,54 @@ public class moveElevator : MonoBehaviour
 
     void startCave() {
 
-        float watchTime = 18f;
         float platformRaiseTime = 10f;
         float delayForSpeech = 1f;
+        float watchTime = 18.3f + delayForSpeech;
 
         // sound
-        TweenNull.Add(elevator, delayForSpeech).Then(delegate () {
+        TweenNull.Add(soundObject, delayForSpeech).Then(delegate () {
             FindObjectOfType<AudioManager>().Play("narration-cave");
         });
         
-        addHeight(12);
+        gotoHeight(12);
         TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startMuseum);
     }
 
     void startMuseum() {
         float watchTimeBeforeRotation = .5f;
-        float rotateDuration = 50f;
+        float rotateDuration = 33f;
 
-        FindObjectOfType<AudioManager>().Play("narration-museum-1");
+        FindObjectOfType<AudioManager>().Play("narration-museum");
 
-        TweenRY.Add(elevator, rotateDuration, 100f).Delay(watchTimeBeforeRotation).EaseInSine().Then(delegate() {
+        TweenRY.Add(elevator, rotateDuration, 100f).Delay(watchTimeBeforeRotation).Then(delegate() {
             float watchTime = 1f;
             float platformRaiseTime = 1f;
-            addHeight(6);
+            gotoHeight(18);
             TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startCity);
         });
     }
 
     void startCity()
     {
-        float watchTime = 5f;
-        float platformRaiseTime = 1f;
-        addHeight(6);
-        TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startMuseum);
+        float watchTime = 1f;
+        float platformRaiseTime = 10f;
+        gotoHeight(38);
+        TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startFreefall);
     }
 
     void startFreefall() {
-        float platformRaiseTime = 1f;
-        addHeight(20);
-        TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Then(delegate() {
-            float freeFallTime = 2f;
-            gotoHeight(18);
+        float freeFallTime = 2f;
+        gotoHeight(18);
 
-            TweenY.Add(elevator, freeFallTime, liftHeight).EaseInCubic().Then(delegate() {
-                // shake floor
-                CameraShaker.Instance.ShakeOnce(12, 2.5f, 0f, 2f);
-                
-                canReset = true;
-            });
-            TweenNull.Add(elevator, 0.5f).Then(delegate() {
-                // free-fall shake
-                CameraShaker.Instance.ShakeOnce(2f, 7f, freeFallTime, 0.01f);
-            });
+        TweenY.Add(elevator, freeFallTime, liftHeight).EaseInCubic().Then(delegate() {
+            // shake floor
+            CameraShaker.Instance.ShakeOnce(12, 2.5f, 0f, 2f);
+            
+            canReset = true;
+        });
+        TweenNull.Add(elevator, 0.5f).Then(delegate() {
+            // free-fall shake
+            CameraShaker.Instance.ShakeOnce(2f, 7f, freeFallTime, 0.01f);
         });
     }
 }
