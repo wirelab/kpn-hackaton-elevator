@@ -143,8 +143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: ambient
-    clip: {fileID: 8300000, guid: 37bc0c2b721a4ae4cab643cd5411b0a7, type: 3}
-    volume: 0.474
+    clip: {fileID: 8300000, guid: 98a6b200d1f1f4c4f977ab0dc3cfba00, type: 3}
+    volume: 0.209
     pitch: 1
     source: {fileID: 0}
   - name: narration01

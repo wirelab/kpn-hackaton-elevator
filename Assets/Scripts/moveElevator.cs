@@ -47,10 +47,16 @@ public class moveElevator : MonoBehaviour
 
     void startCave() {
 
+        float watchTime = 25f;
+        float platformRaiseTime = 8f;
+        float delayForSpeech = 3f;
+
         // sound
-        FindObjectOfType<AudioManager>().Play("narration01");
-        float watchTime = 5f;
-        float platformRaiseTime = 4f;
+        TweenNull.Add(elevator, delayForSpeech).Then(delegate ()
+        {
+            FindObjectOfType<AudioManager>().Play("narration01");
+        });
+        
         addHeight(12);
         TweenY.Add(elevator, platformRaiseTime, liftHeight).EaseInOutSine().Delay(watchTime).Then(startMuseum);
     }
