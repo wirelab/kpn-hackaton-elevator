@@ -7,7 +7,6 @@ using EZCameraShake;
 public class moveElevator : MonoBehaviour
 {
     public GameObject elevator;
-    public GameObject camera01;
     public float elavatorY = 0;
     public float liftHeight = 0;
     public int level = 0;
