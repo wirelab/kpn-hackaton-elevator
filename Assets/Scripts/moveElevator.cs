@@ -7,6 +7,7 @@ using EZCameraShake;
 public class moveElevator : MonoBehaviour
 {
     public GameObject elevator;
+    public GameObject soundObject;
     public float elavatorY = 0;
     public float liftHeight = 0;
     public int level = 0;
@@ -34,6 +35,7 @@ public class moveElevator : MonoBehaviour
         if (!isStarted && (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetMouseButtonDown(0))) {
             isStarted = true;
             startCave();
+            // startMuseum();
         }
 
         if (canReset && (OVRInput.GetDown(OVRInput.RawButton.Back) || Input.GetMouseButtonDown(0))) {
@@ -47,14 +49,13 @@ public class moveElevator : MonoBehaviour
 
     void startCave() {
 
-        float watchTime = 25f;
-        float platformRaiseTime = 8f;
-        float delayForSpeech = 3f;
+        float watchTime = 18f;
+        float platformRaiseTime = 10f;
+        float delayForSpeech = 1f;
 
         // sound
-        TweenNull.Add(elevator, delayForSpeech).Then(delegate ()
-        {
-            FindObjectOfType<AudioManager>().Play("narration01");
+        TweenNull.Add(elevator, delayForSpeech).Then(delegate () {
+            FindObjectOfType<AudioManager>().Play("narration-cave");
         });
         
         addHeight(12);
@@ -62,10 +63,12 @@ public class moveElevator : MonoBehaviour
     }
 
     void startMuseum() {
-        float watchTimeBeforeRotation = 5f;
-        float rotateDuration = 20f;
+        float watchTimeBeforeRotation = .5f;
+        float rotateDuration = 50f;
 
-        TweenRY.Add(elevator, rotateDuration, 360f).Delay(watchTimeBeforeRotation).EaseInSine().Then(delegate() {
+        FindObjectOfType<AudioManager>().Play("narration-museum-1");
+
+        TweenRY.Add(elevator, rotateDuration, 100f).Delay(watchTimeBeforeRotation).EaseInSine().Then(delegate() {
             float watchTime = 1f;
             float platformRaiseTime = 1f;
             addHeight(6);

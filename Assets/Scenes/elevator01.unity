@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028377, g: 0.22571409, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -209,11 +209,36 @@ MonoBehaviour:
   sounds:
   - name: ambient
     clip: {fileID: 8300000, guid: 98a6b200d1f1f4c4f977ab0dc3cfba00, type: 3}
-    volume: 0.209
+    volume: 0.079
     pitch: 1
     source: {fileID: 0}
-  - name: narration01
+  - name: narration-cave
     clip: {fileID: 8300000, guid: 2b647abb57b256942bc099c92f3838b8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: narration-museum-1
+    clip: {fileID: 8300000, guid: 496be3046d0a54647b5d1b582b57da39, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: narration-museum-2
+    clip: {fileID: 8300000, guid: 35ba0064f8b5d55479a6b9ab87e56696, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: narration-museum-3
+    clip: {fileID: 8300000, guid: 72ba33e2901f1ea428ed47bc2b318891, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: narration-museum-4
+    clip: {fileID: 8300000, guid: de5c16992ac522d41bc75a00bfd9a1b2, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: narration-museum-5
+    clip: {fileID: 8300000, guid: 80981a60b81b7bd4db4aa327117119e0, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -376,7 +401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263273131}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 1.0402416, y: 0.113747746, z: -0.0040476327}
+  m_LocalPosition: {x: 1.0402416, y: 0.659, z: -0.004}
   m_LocalScale: {x: 33.28232, y: 1.8701626, z: 1.17753}
   m_Children: []
   m_Father: {fileID: 1774294910}
@@ -522,6 +547,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiText: {fileID: 265337589}
+--- !u!1 &303034968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303034969}
+  m_Layer: 0
+  m_Name: Temp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &303034969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303034968}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.070057, y: 16.319654, z: 2.14756}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &347810318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -591,21 +646,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3a43653da5798f4e9af4660789bef22, type: 3}
---- !u!4 &347810319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 347810318}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686877889}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 567156207}
-  m_Father: {fileID: 863827193}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358702056
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,21 +995,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd603149e175af444a188a28701588bf, type: 3}
---- !u!4 &567156207
+--- !u!4 &567156207 stripped
 Transform:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 400002, guid: c3a43653da5798f4e9af4660789bef22,
     type: 3}
   m_PrefabInstance: {fileID: 347810318}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200592660}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 347810319}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &654211503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,22 +1069,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 678225789}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &686877889
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 347810318}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 347810319}
-  m_Layer: 0
-  m_Name: TV (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1001 &856063176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1177,7 +1192,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 17.9, z: 0.34}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
-  - {fileID: 347810319}
+  - {fileID: 567156207}
   - {fileID: 1351990128}
   - {fileID: 360553153}
   - {fileID: 1575241713}
@@ -1622,22 +1637,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117748289}
   m_CullTransparentMesh: 0
---- !u!1 &1200592660
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 347810318}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 567156207}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &1212613231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec,
@@ -2636,6 +2635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elevator: {fileID: 1774294911}
+  soundObject: {fileID: 303034968}
   elavatorY: 0
   liftHeight: 0
   level: 0
