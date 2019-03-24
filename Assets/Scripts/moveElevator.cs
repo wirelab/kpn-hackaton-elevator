@@ -34,8 +34,8 @@ public class moveElevator : MonoBehaviour
     {
         if (!isStarted && (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetMouseButtonDown(0))) {
             isStarted = true;
-            TweenY.Add(elevator, 0f, 0).Then(startCave);
-            // TweenY.Add(elevator, 0f, 12).Then(startMuseum);
+            // TweenY.Add(elevator, 0f, 0).Then(startCave);
+            TweenY.Add(elevator, 0f, 12).Then(startMuseum);
             // TweenY.Add(elevator, 0f, 18).Then(startCity);
         }
 
@@ -65,7 +65,7 @@ public class moveElevator : MonoBehaviour
 
     void startMuseum() {
         float watchTimeBeforeRotation = .5f;
-        float rotateDuration = 33f;
+        float rotateDuration = 1f;
 
         FindObjectOfType<AudioManager>().Play("narration-museum");
 
