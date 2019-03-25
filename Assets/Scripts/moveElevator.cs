@@ -20,7 +20,7 @@ public class moveElevator : MonoBehaviour
 
     void Start()
     {
-       FindObjectOfType<ComponentSwitcher>().Hide();
+    
     }
 
     void addHeight(float height) {
@@ -49,6 +49,8 @@ public class moveElevator : MonoBehaviour
     }
 
     void startCave() {
+
+        FindObjectOfType<ComponentSwitcher>().Hide();
 
         float platformRaiseTime = 10f;
         float delayForSpeech = 1f;
